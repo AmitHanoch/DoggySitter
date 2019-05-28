@@ -2,12 +2,17 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="DoggySitter Status">
     <Files>
       <File FileName="DoggySitter Status" />
+      <File FileName="Controllers/HomeController.cs" Line="16" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="DoggySitter" expanded="True" selected="True">
-            <Node name="DoggySitter" expanded="True" />
+          <Node name="DoggySitter" expanded="True">
+            <Node name="DoggySitter" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
