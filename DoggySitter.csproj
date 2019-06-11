@@ -12,5 +12,6 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
+    <Folder Include="Views\Branch\" />
   </ItemGroup>
 </Project>

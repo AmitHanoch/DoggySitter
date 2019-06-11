@@ -10,42 +10,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DoggySitter.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class BranchController : ControllerBase
+    public class BranchController : Controller
     {
-        private readonly DoggySitterContext _context;
-
-        public BranchController(DoggySitterContext context)
+        public IActionResult Branch()
         {
-            _context = context;
+            ViewData["Message"] = "dsadad";
 
-            if (_context.Branches.Count() == 0)
-            {
-                _context.Branches.Add(new Branch(1, "olam"));
-                _context.SaveChanges();
-            }
+            return View();
         }
 
-        // GET: api/Todo
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Branch>>> GetTodoItems()
-        {
-            return await _context.Branches.ToListAsync();
-        }
-
-        // GET: api/Todo/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Branch>> GetTodoItem(long id)
-        {
-            var todoItem = await _context.Branches.FindAsync(id);
-
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
-
-            return todoItem;
-        }
     }
 }
