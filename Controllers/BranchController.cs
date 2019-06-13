@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DoggySitter.Context;
@@ -19,20 +20,38 @@ namespace DoggySitter.Controllers
         public BranchController(DoggySitterContext context)
         {
             _context = context;
+
+            createBranchesData();
+        }
+
+        private void createBranchesData()
+        {
+            if (!_context.Branches.ToList().Any())
+            {
+                List<Branch> branches = new List<Branch>
+                {
+                    new Branch(1, "Jaffa", "Jerusalem Rd. 29, Jaffa", "8:00-18:00 Everyday"),
+                    new Branch(2, "Bein Nechemia", "Hanarkis 1, Beit Nechemia", "8:00-16:00 Everyday"),
+                };
+
+                _context.Branches.AddRange(branches);
+                _context.SaveChanges();
+            }
         }
 
         public IActionResult Branch()
         {
-            ViewData["Message"] = "dsadad";
+            ViewData["Title"] = "Our Branches!";
 
             return View();
         }
 
-        public string GetBranches()
+        [HttpGet]
+        public JsonResult GetBranches()
         {
             List<Branch> branches = _context.Branches.ToList();
 
-            return JsonConvert.SerializeObject(branches, Formatting.Indented);
+            return Json(branches);
         }
 
     }
