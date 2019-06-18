@@ -14,4 +14,12 @@
     <Folder Include="Context\" />
     <Folder Include="Views\Branch\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Branch\EmptyCSSFile.css" />
+    <None Remove="Views\Branch\Branches.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\Branches.css" />
+    <Content Remove="wwwroot\css\general.css" />
+  </ItemGroup>
 </Project>

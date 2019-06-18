@@ -30,9 +30,11 @@ namespace DoggySitter.Controllers
             {
                 List<Branch> branches = new List<Branch>
                 {
-                    new Branch(1, "Jaffa", "Jerusalem Rd. 29, Jaffa", "8:00-18:00 Everyday"),
-                    new Branch(2, "Bein Nechemia", "Hanarkis 1, Beit Nechemia", "8:00-16:00 Everyday"),
-                };
+                    Models.Branch.of(1, "Jaffa", "Jerusalem Rd. 29, Jaffa", "8:00-18:00 Everyday"),
+                    Models.Branch.of(2, "Bein Nechemia", "Hanarkis 1, Beit Nechemia", "8:00-16:00 Everyday"),
+                    Models.Branch.of(3, "Modi'in", "Dekel 11, Modi'in", "8:00-20:00 Everyday"),
+                    Models.Branch.of(4, "Hod Hasharon", "Itshak Ben-Tzvi 4, Hod Hasharon", "10:00-19:00 Everyday"),
+                   };
 
                 _context.Branches.AddRange(branches);
                 _context.SaveChanges();
@@ -43,16 +45,9 @@ namespace DoggySitter.Controllers
         {
             ViewData["Title"] = "Our Branches!";
 
+            ViewBag.Branches = _context.Branches.ToList();
+
             return View();
         }
-
-        [HttpGet]
-        public JsonResult GetBranches()
-        {
-            List<Branch> branches = _context.Branches.ToList();
-
-            return Json(branches);
-        }
-
     }
 }

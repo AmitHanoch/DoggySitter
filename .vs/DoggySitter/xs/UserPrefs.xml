@@ -1,21 +1,27 @@
 ﻿<Properties StartupConfiguration="{5DA96F96-68B7-4FCA-81D9-9A51E09572BA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Branch/Branch.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="Views/Branch/Branch.cshtml" Line="32" Column="36" />
-      <File FileName="Controllers/BranchController.cs" Line="37" Column="32" />
-      <File FileName="Views/Branch/Branches.js" Line="3" Column="4" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="9" Column="64" />
+      <File FileName="Controllers/BranchController.cs" Line="37" Column="20" />
+      <File FileName="Views/Branch/Branch.cshtml" Line="1" Column="1" />
+      <File FileName="wwwroot/css/general.css" Line="11" Column="2" />
+      <File FileName="Models/Branch.cs" Line="6" Column="6" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="12" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="DoggySitter" expanded="True">
             <Node name="DoggySitter" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Branch" expanded="True">
-                  <Node name="Branch.cshtml" selected="True" />
+                <Node name="Branch" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
                 </Node>
-                <Node name="Home" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -28,8 +34,8 @@
   <MonoDevelop.Ide.ItemProperties.DoggySitter PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/amit/Documents/לימודים/אפליקציות אינטרנטיות/DoggySitter/Controllers/BranchController.cs" relfile="Controllers/BranchController.cs" line="79" column="1" />
-      <Breakpoint file="/Users/amit/Documents/לימודים/אפליקציות אינטרנטיות/DoggySitter/Controllers/BranchController.cs" relfile="Controllers/BranchController.cs" line="72" column="1" />
+      <Breakpoint file="/Users/amit/Documents/לימודים/אפליקציות אינטרנטיות/DoggySitter/Controllers/BranchController.cs" relfile="Controllers/BranchController.cs" line="74" column="1" />
+      <Breakpoint file="/Users/amit/Documents/לימודים/אפליקציות אינטרנטיות/DoggySitter/Controllers/BranchController.cs" relfile="Controllers/BranchController.cs" line="69" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
