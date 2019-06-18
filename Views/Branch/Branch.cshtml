@@ -1,14 +1,26 @@
 ﻿<h2>@ViewData["Title"]</h2>
 
 <div class="row">
-    @foreach (var branch in ViewBag.Branches)
-    {
-        <div class="card horizontal" style="width: 18rem; height: 13rem;">
-            <div class="card-body">
-                <h5 class="card-title">@branch.Name</h5>
-                <h6 class="card-subtitle mb-2 text-muted">@branch.Address</h6>
-                <p class="card-text">@branch.OpeningHours</p>
+    <div style="margin: 0 auto;width: max-content;">
+        @foreach (var branch in ViewBag.Branches)
+        {
+            <div class="card horizontal" style="width: 18rem; height: 13rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@branch.Name</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">@branch.Address</h6>
+                    <p class="card-text">@branch.OpeningHours</p>
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>
+
+<div id="map" style=" margin: 0 auto; width:100rem; height: 50rem; margin-top: 16px;"></div>
+
+<script type='text/javascript'>
+    var map;
+    function initMap() {
+        map = new Microsoft.Maps.Map('#map', {});
+    }
+</script>
+<script src='https://www.bing.com/api/maps/mapcontrol?callback=initMap&key=AtZY06FRanrtJxDGTeSGzu9caUxK_71IL6tLRm73FZOz8X5nTXkNoKOngnpl--xs' async defer></script>
